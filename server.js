@@ -7,7 +7,7 @@ app.post('/api/lead', async (req, res) => {
   const { name, phone, center } = req.body;
 
   // Отправка на Zapier Webhook
-  const zapierResponse = await fetch('https://hooks.zapier.com/hooks/catch/ВАШ_WEBHOOK_ID/ВАШ_WEBHOOK_KEY/', {
+  const zapierResponse = await fetch('https://hooks.zapier.com/hooks/catch/22921441/273qvb2/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, phone, center })
