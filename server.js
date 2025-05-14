@@ -18,6 +18,7 @@ app.post('/api/lead', async (req, res) => {
   });
 
   const zapierData = await zapierResponse.text();
+  console.log('Отправляем в Zapier:', { name, phone, center });
   res.status(200).send({ status: 'ok', zapier: zapierData });
 });
 
