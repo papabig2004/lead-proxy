@@ -7,6 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/api/lead', async (req, res) => {
+  console.log('Получено с сайта:', req.body);
   const { name, phone, center } = req.body;
 
   // Отправка на Zapier Webhook
